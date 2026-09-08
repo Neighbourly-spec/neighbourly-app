@@ -1,10 +1,10 @@
 {
   "name":"Neighbourly",
   "short_name":"Neighbourly",
-  "start_url":"./index.html",
+  "description":"Local services, made Neighbourly.",
+  "start_url":"./",
   "display":"standalone",
-  "background_color":"#f7f9f8",
+  "background_color":"#f4f8f7",
   "theme_color":"#2f9fa4",
-  "description":"Connect. Help. Grow.",
-  "icons":[{"src":"neighbourly-brand.png","sizes":"1536x1024","type":"image/png","purpose":"any"}]
+  "icons":[{"src":"neighbourly-brand.png","sizes":"any","type":"image/png","purpose":"any maskable"}]
 }
