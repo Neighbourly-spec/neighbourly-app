@@ -1,10 +1,9 @@
 {
   "name":"Neighbourly",
   "short_name":"Neighbourly",
-  "description":"Local services, made Neighbourly.",
+  "description":"Local services, community events and real human support.",
   "start_url":"./",
   "display":"standalone",
   "background_color":"#f4f8f7",
-  "theme_color":"#2f9fa4",
-  "icons":[{"src":"neighbourly-brand.png","sizes":"any","type":"image/png","purpose":"any maskable"}]
+  "theme_color":"#2f9fa4"
 }
