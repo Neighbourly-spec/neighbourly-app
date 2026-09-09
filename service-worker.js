@@ -1,4 +1,4 @@
-const CACHE='neighbourly-v0-4-2';
+const CACHE='neighbourly-v0-4-3';
 const ASSETS=['./','index.html','styles.css','app.js','manifest.webmanifest','neighbourly-quick-start-guide.pdf','sisters-help-desk.png'];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)));self.skipWaiting()});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))));self.clients.claim()});

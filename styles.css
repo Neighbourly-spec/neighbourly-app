@@ -502,3 +502,46 @@ button:hover{transform:translateY(-1px)}
 .hero-logo span .nav-icon{width:28px;height:28px}
 .icon-btn .nav-icon{width:20px;height:20px}
 .side-brand-mark,.brand-mark,.hero-logo span{color:#a66558}
+
+
+/* =========================================================
+   V4.3 VISUAL QA POLISH
+   Keeps V4.2's approved subtle palette while reducing density.
+   ========================================================= */
+/* Compact curated provider cards on dashboards only */
+.home-provider-rail{align-items:stretch}
+.provider-mini-card{position:relative;min-width:0;background:#fffdfa;border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:none;transition:transform .17s ease,border-color .17s ease,box-shadow .17s ease}
+.provider-mini-card:hover{transform:translateY(-2px);border-color:#d7cbc2;box-shadow:0 12px 30px rgba(47,42,37,.065)}
+.provider-mini-main{display:block;width:100%;padding:0;border:0;background:transparent;text-align:left}
+.provider-mini-main .service-visual{height:112px;border-radius:0;margin:0}
+.provider-mini-image{display:block;width:100%;height:112px;object-fit:cover;background:#f2eeea}
+.provider-mini-copy{padding:13px 14px 15px}
+.provider-mini-name{display:flex;align-items:center;gap:6px;padding-right:36px}
+.provider-mini-name b{font-family:Georgia,"Times New Roman",serif;font-size:17px;line-height:1.1;color:var(--ink)}
+.provider-mini-copy>span{display:block;margin-top:5px;font-size:12px;color:#69716f;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.provider-mini-copy>small{display:block;margin-top:8px;color:#676e6c;font-size:11px;font-weight:760}
+.provider-mini-heart{position:absolute;right:10px;top:10px;width:34px;height:34px;font-size:18px;background:rgba(255,253,250,.92);border:1px solid rgba(231,224,217,.92);backdrop-filter:blur(8px)}
+.verified.mini{width:20px;height:20px;padding:0;justify-content:center;border-radius:50%;font-size:10px}
+.provider-mini-name .promoted{font-size:8px;padding:4px 6px}
+
+/* Remove the last traces of the older teal/yellow prototype palette */
+.community-strip{background:linear-gradient(145deg,#fffdfa,#f3f0eb);border-color:var(--line)}
+.connection-note{background:#f5f1ed;border-color:var(--line)}
+.welcome-card,.welcome-card.provider{background:linear-gradient(145deg,#fffdfa,#f4efea)}
+.steps b{background:#f0ebe6;color:#655e59}
+.progress .on{background:#7c726c}
+.provider-id-inline{background:#f4efea}
+.status-accepted,.status-in_progress{background:#edf2ee;color:#4f6d5b}
+.count-pill{background:#f1ece7;color:#74625b}
+
+/* More intentional focus states for a premium, accessible feel */
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid #8e766d;outline-offset:3px}
+
+/* Mobile density: show one-and-a-bit cards so the horizontal rail feels deliberate */
+@media(max-width:859px){
+  .home-provider-rail{display:flex;overflow-x:auto;gap:12px;scroll-snap-type:x proximity;padding:2px 2px 8px;scrollbar-width:none}
+  .home-provider-rail::-webkit-scrollbar{display:none}
+  .provider-mini-card{flex:0 0 76vw;scroll-snap-align:start}
+  .provider-mini-main .service-visual,.provider-mini-image{height:106px}
+}
+@media(max-width:470px){.provider-mini-card{flex-basis:80vw}}
