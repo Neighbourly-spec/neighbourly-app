@@ -4,6 +4,6 @@
   "description": "Local services, community events and real human support \u2014 made Neighbourly.",
   "start_url": "./",
   "display": "standalone",
-  "background_color": "#f7f8f4",
-  "theme_color": "#237c79"
+  "background_color": "#fff8f1",
+  "theme_color": "#f47b4d"
 }
