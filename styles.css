@@ -545,3 +545,196 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,te
   .provider-mini-main .service-visual,.provider-mini-image{height:106px}
 }
 @media(max-width:470px){.provider-mini-card{flex-basis:80vw}}
+
+/* =========================================================
+   V4.4 COMPLETENESS + ACCESSIBILITY POLISH
+   New flows use the same subtle premium visual language.
+   ========================================================= */
+.customer-status-note{
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  margin:12px 0 2px;padding:10px 12px;border-radius:14px;
+  background:#f7f3ef;border:1px solid #e8e0d9;color:#59605e;
+}
+.customer-status-note b{font-size:12px;color:var(--ink);letter-spacing:.01em}
+.customer-status-note span{font-size:12px;text-align:right;color:#737976}
+.status-note-accepted,.status-note-in_progress{background:#f1f4f1;border-color:#dde7df}
+.status-note-completed{background:#f2f5f0;border-color:#dce6da}
+.status-note-declined,.status-note-cancelled{background:#f4f2f0;color:#77736f}
+
+.scope-preview{
+  padding:15px 16px;margin-bottom:2px;border-radius:18px;
+  background:linear-gradient(145deg,#fffdfa,#f5f0eb);border:1px solid var(--line);
+}
+.scope-preview small,.scope-preview span{display:block;color:var(--muted)}
+.scope-preview h3{margin:4px 0 6px;font-family:Georgia,"Times New Roman",serif;font-size:22px;color:var(--ink)}
+.scope-preview span{font-size:12px}
+.scope-summary{
+  display:grid;gap:4px;margin:11px 0;padding:12px 13px;border-radius:15px;
+  background:#f7f4f0;border:1px solid #e9e2db;
+}
+.scope-summary small{color:#8b817a;text-transform:uppercase;letter-spacing:.08em;font-size:9px;font-weight:800}
+.scope-summary b{font-size:13px;line-height:1.45;color:var(--ink)}
+.scope-summary span{font-size:11px;color:var(--muted);line-height:1.4}
+
+.customer-tour-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;margin:18px 0 22px}
+.tour-card{
+  display:flex;gap:13px;align-items:flex-start;min-height:155px;padding:18px;
+  border-radius:22px;background:#fffdfa;border:1px solid var(--line);box-shadow:none;
+}
+.tour-card:nth-child(2){background:linear-gradient(145deg,#fffdfa,#f1f3ef)}
+.tour-card:nth-child(3){background:linear-gradient(145deg,#fffdfa,#f5f0eb)}
+.tour-card:nth-child(4){background:linear-gradient(145deg,#fffdfa,#f2efeb)}
+.tour-card .n-icon{margin-top:2px;background:#fff;border-color:#e9e1da}
+.tour-card small{display:block;color:#9a8b83;font-size:10px;font-weight:900;letter-spacing:.08em}
+.tour-card h2{margin:5px 0 7px;font-size:21px;line-height:1.08}
+.tour-card p{margin:0;color:var(--muted);font-size:12px;line-height:1.5}
+
+.answer-review{display:grid;gap:8px;margin:15px 0;text-align:left}
+.answer-review>div{
+  padding:11px 12px;border-radius:14px;background:#f7f4f0;border:1px solid #e8e0d9;
+}
+.answer-review b{display:block;font-size:12px;color:var(--ink);margin-bottom:3px}
+.answer-review span{display:block;color:var(--muted);font-size:12px;line-height:1.45}
+.weak-sections{display:flex;gap:7px;flex-wrap:wrap;margin:13px 0 16px}
+.weak-sections span{padding:7px 9px;border-radius:999px;background:#f2ece8;border:1px solid #e5d9d1;color:#765f58;font-size:11px;font-weight:800}
+
+.verification-notice{
+  display:flex;gap:12px;align-items:flex-start;margin:14px 0;padding:14px 15px;
+  border-radius:18px;background:#f5f1ec;border:1px solid #e5ddd5;
+}
+.verification-notice .n-icon{background:#fffdfa;color:#7c665e}
+.verification-notice b,.verification-notice span{display:block}
+.verification-notice b{font-size:14px;color:var(--ink)}
+.verification-notice span{margin-top:4px;color:var(--muted);font-size:12px;line-height:1.45}
+
+/* Requests should feel scan-friendly instead of like form dumps. */
+.request-card .request-details{padding-bottom:2px}
+.request-card .extra-card{border-color:#e5ddd6;background:#f7f3ef}
+.request-card .message-thread{border-color:#e8e0d9;background:#faf8f5}
+
+@media(max-width:600px){
+  .customer-status-note{align-items:flex-start;flex-direction:column;gap:3px}
+  .customer-status-note span{text-align:left}
+  .customer-tour-grid{grid-template-columns:1fr;gap:10px}
+  .tour-card{min-height:0;padding:16px}
+  .tour-card h2{font-size:20px}
+  .scope-preview{padding:14px}
+  .scope-preview h3{font-size:20px}
+  .answer-review>div{padding:10px 11px}
+}
+
+/* V4.4 trust/contact + audit details */
+.btn.full{width:100%;margin-top:10px}
+.audit-list{display:grid;gap:9px;margin-top:12px}
+.audit-list>div{display:grid;gap:3px;padding:11px 12px;border-radius:14px;background:#f8f5f1;border:1px solid #e8e0d9}
+.audit-list b{font-size:12px;color:var(--ink)}
+.audit-list span,.audit-list small{color:var(--muted);font-size:11px;line-height:1.4}
+.verify-row>.mini-pill{align-self:center;white-space:nowrap}
+.onboarding-help-notice,.site-visit-box{
+  display:flex;align-items:center;gap:12px;margin:13px 0;padding:13px 14px;
+  border-radius:18px;background:#f6f2ed;border:1px solid #e6ddd5;
+}
+.onboarding-help-notice .n-icon{background:#fffdfa;color:#6f625c}
+.onboarding-help-notice b,.onboarding-help-notice span,.site-visit-box b,.site-visit-box span{display:block}
+.onboarding-help-notice span,.site-visit-box span{color:var(--muted);font-size:12px;line-height:1.45}
+.site-visit-box{justify-content:space-between;flex-wrap:wrap}
+.site-visit-box .btn{margin-left:auto}
+@media(max-width:600px){.site-visit-box{align-items:flex-start}.site-visit-box .btn{width:100%;margin-left:0}}
+.status-verification_in_progress{background:#f2efe9;color:#6f6357}
+.status-declined{background:#f3f0ed;color:#7a716b}
+
+/* =========================================================
+   V4.4 PRE-RELEASE USABILITY GATE
+   Home is always reachable; critical controls use text labels;
+   touch targets and reading contrast are friendlier for new/older users.
+   ========================================================= */
+:root{--muted:#656d6b}
+button,a{touch-action:manipulation}
+
+/* The Neighbourly mark is a real Home control everywhere. */
+.side-nav-head{display:flex;align-items:flex-start;gap:8px}
+.side-brand{
+  flex:1;width:100%;border:0;background:transparent;color:inherit;text-align:left;cursor:pointer;
+  display:flex;gap:10px;align-items:center;padding:3px 7px 16px;border-bottom:1px solid #ece5dd;min-height:62px;overflow:hidden;
+}
+.side-brand:hover,.side-brand:focus-visible{background:#f6f1ec;border-radius:16px}
+.hero-logo{border:0;background:transparent;padding:0;color:inherit;cursor:pointer;text-align:left}
+.hero-logo:hover{transform:none;opacity:.9}
+.brand-mark{border:1px solid #ead8d0;padding:0;cursor:pointer}
+.brand-mark:hover{background:#f4efea}
+
+/* Clear labels instead of relying on icons alone. */
+.topbar-menu,.icon-btn{width:auto;min-width:68px;height:44px;padding:0 12px;display:none;align-items:center;justify-content:center;gap:7px;border-radius:14px}
+.icon-btn{display:flex}
+.topbar-menu span,.icon-btn span{font-size:12px;font-weight:800}
+.topbar-menu .nav-icon,.icon-btn .nav-icon{width:19px;height:19px}
+.mobile-nav-close{display:none;border:0;background:#f5f0eb;color:#5e625f;border-radius:13px;min-height:44px;padding:0 12px;align-items:center;gap:6px;font-weight:800}
+.mobile-nav-close span{font-size:22px;line-height:1}.mobile-nav-close b{font-size:12px}
+
+/* Collapsed desktop menu still explains every icon on hover/focus. */
+.nav-collapsed .nav-btn{position:relative;overflow:visible}
+@media(min-width:860px){
+  .nav-collapsed .nav-btn:hover::after,.nav-collapsed .nav-btn:focus-visible::after{
+    content:attr(data-label);position:absolute;left:60px;top:50%;transform:translateY(-50%);z-index:120;
+    white-space:nowrap;padding:8px 10px;border-radius:10px;background:#20282b;color:#fff;font-size:12px;font-weight:750;
+    box-shadow:0 8px 24px rgba(32,40,43,.16);pointer-events:none;
+  }
+}
+
+/* Close means Close, even for someone who has never learned the X convention. */
+.close-row .modal-close{width:auto;min-width:74px;min-height:44px;padding:0 10px;display:flex;align-items:center;justify-content:center;gap:5px;border-radius:13px}
+.close-row .modal-close>span{font-size:22px;line-height:1}
+.close-row .modal-close small{font-size:11px;font-weight:800;color:inherit}
+
+.quick-help-actions{display:grid;gap:9px;margin-top:16px}
+.quick-help-actions .btn{display:flex;align-items:center;justify-content:flex-start;gap:10px;text-align:left;min-height:48px}
+.quick-help-actions .nav-icon{width:20px;height:20px;flex:0 0 20px}
+
+/* Generous targets and readable supporting text. */
+.btn,.segmented button,.nav-btn,.helpdesk-grid button,.profile-menu-grid button{min-height:44px}
+.btn.small{min-height:44px}
+.heart,.brand-mark{min-width:44px;min-height:44px}
+.field label{font-size:14px}
+.field small,.form small,.muted,.section-note{color:var(--muted)}
+.topbar small{color:#686f6d}
+
+/* Five-card customer welcome still feels intentional. */
+.tour-card:nth-child(5){background:linear-gradient(145deg,#fffdfa,#f4f1ed)}
+
+@media(max-width:859px){
+  .topbar-menu{display:flex}
+  .mobile-nav-close{display:flex}
+  .side-nav-head{align-items:center}
+  .side-nav-head .side-brand{border-bottom:0;padding-bottom:8px}
+  .side-nav{padding-top:12px}
+  .side-nav-items{border-top:1px solid #ece5dd;padding-top:12px;margin-top:6px}
+  .topbar{align-items:center;gap:8px}
+  .topbar-copy{flex:1;min-width:0}
+  .brand-row{min-width:0}
+  .brand-row>span:last-child{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .topbar-menu,.icon-btn{min-width:66px;padding-inline:10px}
+  .btn{min-height:48px}
+  .btn.small{min-height:46px}
+  .heart{width:44px;height:44px}
+  .nav-btn{min-height:52px;font-size:14px}
+  .side-brand b{font-size:22px}
+  .side-brand small{font-size:9px}
+}
+@media(max-width:420px){
+  .topbar-menu,.icon-btn{min-width:56px;padding-inline:8px;gap:5px}
+  .topbar-menu span,.icon-btn span{font-size:11px}
+  .brand-row{font-size:18px}
+  .topbar small{font-size:11px}
+}
+/* Production-candidate safety controls */
+.emergency-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0;padding:12px;border:1px solid rgba(82,42,33,.18);border-radius:18px;background:#fff8f3}.emergency-btn{font-weight:900}.emergency-sisters{background:#eef2e9;color:#252523;border:1px solid #aab59d;font-weight:850}.emergency-actions .btn{min-height:48px}@media(max-width:520px){.emergency-actions{grid-template-columns:1fr}}
+
+/* RC5 media + staff reporting polish */
+.profile-avatar img{width:100%;height:100%;object-fit:cover;border-radius:inherit;display:block}
+.media-state{display:block;margin-top:6px;font-weight:800}.media-approved{color:#366b50}.media-pending{color:#8a5c2c}.media-rejected{color:#9b3a3a}
+.media-review-preview{width:100%;max-height:360px;object-fit:contain;border-radius:18px;background:#faf7f1;margin-bottom:12px}
+.media-review-card{overflow:hidden}
+
+.public-provider-photo{width:128px;height:128px;margin:2px auto 16px;border-radius:28px;background:#fffaf3;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;overflow:hidden;padding:8px;box-shadow:0 8px 24px rgba(32,27,24,.06)}.public-provider-photo.portrait{border-radius:50%;padding:0;background:#f7eee4}.public-provider-photo.portrait img{width:100%;height:100%;object-fit:cover;object-position:center 30%}.public-provider-photo.logo img{width:100%;height:100%;object-fit:contain}.public-provider-photo.logo{background:#fff}.tier-feature-list{padding-left:0;list-style:none;margin:14px 0;display:grid;gap:7px;font-size:13px;color:var(--muted)}.core-plan-note{margin:18px 0;padding:15px 17px;border:1px solid var(--line);border-radius:18px;background:#fffaf3;display:grid;gap:5px}.core-plan-note span{color:var(--muted);font-size:13px;line-height:1.5}
+
+.admin-record-tools{margin:14px 0}.admin-record-list{display:grid;gap:10px;max-height:60vh;overflow:auto}.record-row{border:1px solid var(--line);border-radius:14px;padding:12px;background:#fff;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 14px}.record-row div{min-width:0}.record-row small{display:block;color:var(--muted);font-weight:700}.record-row span{display:block;overflow-wrap:anywhere;font-size:13px}@media(max-width:700px){.record-row{grid-template-columns:1fr}}

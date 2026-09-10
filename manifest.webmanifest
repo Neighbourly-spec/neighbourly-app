@@ -1,9 +1,9 @@
 {
   "name": "Neighbourly",
   "short_name": "Neighbourly",
-  "description": "Local services, community events and real human support \u2014 made Neighbourly.",
+  "description": "Local services, community events and real human support — made Neighbourly.",
   "start_url": "./",
   "display": "standalone",
-  "background_color": "#fff8f1",
-  "theme_color": "#d77b69"
+  "background_color": "#f7f4f0",
+  "theme_color": "#20282b"
 }

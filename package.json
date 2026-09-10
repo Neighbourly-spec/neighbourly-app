@@ -1,0 +1,1 @@
+{"name":"neighbourly-production-candidate","private":true,"version":"0.5.0-rc.5.2","scripts":{"test":"node tests/static-qa.mjs"}}
